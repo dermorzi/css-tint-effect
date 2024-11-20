@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tint Effect</title>
+
+    <style>
+      html {
+      background-color: #222;
+    }
+
+    body {
+      align-content: center;
+      height: 100dvh;
+      margin: 0;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      inset: 0;
+      position: absolute;
+      z-index: -1;
+
+      background-image: url('/img.webp');
+      background-position: center;
+      background-size: cover;
+
+      mask-image: url('/tint.gif');
+      mask-size: cover;
+      mask-position: center;
+    }
+
+    h1 {
+      color: #F2F0DE;
+      font-size: 5rem;
+      text-align: center;
+      text-shadow: 2px 2px #222;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Tint Effect</h1>
+  </body>
+</html>
